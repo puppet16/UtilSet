@@ -5,8 +5,6 @@ import android.content.res.Configuration;
 import android.util.DisplayMetrics;
 import android.view.WindowManager;
 
-import com.luck.library.base.MyApplication;
-
 /*************************************************************************************
  * Module Name:
  * Description:
@@ -36,11 +34,11 @@ public class UIUtils {
 
     private static void readScreenSize() {
         DisplayMetrics dm = new DisplayMetrics();
-        WindowManager manager = (WindowManager) MyApplication.getContext().getSystemService(Context.WINDOW_SERVICE);
+        WindowManager manager = (WindowManager) ApplicationUtils.getApp().getSystemService(Context.WINDOW_SERVICE);
         manager.getDefaultDisplay().getMetrics(dm);
         SCREEN_WIDTH = dm.widthPixels;
         SCREEN_HEIGHT = dm.heightPixels;
-        boolean isFlag = (MyApplication.getContext().getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_LARGE;
+        boolean isFlag = (ApplicationUtils.getApp().getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_LARGE;
         LogUtils.d(TAG, "screen width " + SCREEN_WIDTH + " height " + SCREEN_HEIGHT + " " + isFlag);
         if (SCREEN_HEIGHT < SCREEN_WIDTH && !isFlag) {
             SCREEN_HEIGHT = SCREEN_HEIGHT ^ SCREEN_WIDTH;
@@ -50,12 +48,12 @@ public class UIUtils {
     }
 
     public static int dp2px(float dpValue) {
-        final float scale = MyApplication.getContext().getResources().getDisplayMetrics().density;
+        final float scale = ApplicationUtils.getApp().getResources().getDisplayMetrics().density;
         return (int) (dpValue * scale + 0.5f);
     }
 
     public static int px2dp(float pxValue) {
-        final float scale = MyApplication.getContext().getResources().getDisplayMetrics().density;
+        final float scale = ApplicationUtils.getApp().getResources().getDisplayMetrics().density;
         return (int) (pxValue / scale + 0.5f);
     }
 }

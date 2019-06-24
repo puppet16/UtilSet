@@ -9,9 +9,9 @@ import java.util.regex.Pattern;
  * Author: 李桐桐
  * Date:   2019/6/19
  *************************************************************************************/
-public class PhoneRegexManager {
+public class PhoneRegexUtils {
 
-    private static volatile PhoneRegexManager mInstance;
+    private static volatile PhoneRegexUtils mInstance;
     //匹配所有号码（手机卡 + 数据卡 + 上网卡）
     private final String regexAllCard = "^(?:\\+?86)?1(?:3\\d{3}|5[^4\\D]\\d{2}|8\\d{3}|7(?:[01356789]\\d{2}|4(?:0\\d|1[0-2]|9\\d))|9[189]\\d{2}|6[567]\\d{2}|4(?:[14]0\\d{3}|[68]\\d{4}|[579]\\d{2}))\\d{6}$";
     //匹配所有支持短信功能的号码（手机卡 + 上网卡）
@@ -36,11 +36,11 @@ public class PhoneRegexManager {
     //电信卡
     private final String regexVirtualPhoneTelecom = "^(?:\\+?86)?170[0-2]\\d{7}$";
 
-    public static PhoneRegexManager getInstance() {
+    public static PhoneRegexUtils getInstance() {
         if (mInstance == null) {
-            synchronized (PhoneRegexManager.class) {
+            synchronized (PhoneRegexUtils.class) {
                 if (mInstance == null) {
-                    mInstance = new PhoneRegexManager();
+                    mInstance = new PhoneRegexUtils();
                 }
             }
         }
