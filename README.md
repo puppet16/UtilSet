@@ -1,4 +1,4 @@
-# UtilSet ![GitHub repo size](https://img.shields.io/github/repo-size/puppet16/UtilSet.svg?color=1) ![GitHub release](https://img.shields.io/github/release/puppet16/UtilSet.svg)
+# UtilSet ![GitHub repo size](https://img.shields.io/github/repo-size/puppet16/utilset.svg?color=green) ![GitHub release](https://img.shields.io/github/release/puppet16/UtilSet.svg)
 放置一些工具类
 
 设置依赖库指南：[https://www.jianshu.com/p/6b489a73df4e](https://www.jianshu.com/p/6b489a73df4e)  
