@@ -40,4 +40,6 @@ dependencies {
     api 'com.github.GrenderG:Toasty:1.4.2'
     //Gson
     api 'com.google.code.gson:gson:2.8.5'
+    //EventBus
+    implementation 'org.greenrobot:eventbus:3.1.1'
 }

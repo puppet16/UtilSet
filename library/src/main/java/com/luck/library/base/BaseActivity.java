@@ -1,7 +1,9 @@
 package com.luck.library.base;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -10,7 +12,13 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.luck.library.R;
+import com.luck.library.event.LanguageChangedEvent;
+import com.luck.library.utils.LanguageUtils;
 import com.luck.library.widget.GestureViewGroup;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
@@ -21,11 +29,16 @@ import butterknife.Unbinder;
  * Author: 李桐桐
  * Date:   2019/6/19
  *************************************************************************************/
-public class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity {
     protected BaseActivity mActivity;
     public final String TAG = getClass().getSimpleName();
     protected Unbinder mBinder;
     private GestureViewGroup mGestureView;
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(LanguageUtils.getInstance().attachBaseContext(newBase));
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,6 +55,9 @@ public class BaseActivity extends AppCompatActivity {
                 }
             });
         }
+        EventBus.getDefault().register(this);
+        setContentView(getPageLayoutId());
+        initPage();
     }
 
     @Override
@@ -66,7 +82,6 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     public void finish() {
         super.finish();
-
         if (hasCustomSlide()) {
             mActivity.overridePendingTransition(0, R.anim.slide_right_out);
         }
@@ -76,10 +91,28 @@ public class BaseActivity extends AppCompatActivity {
         return true;
     }
 
+    protected abstract void initPage();
+
+    protected abstract int getPageLayoutId();
+
     @Override
     public void setContentView(int layoutResID) {
         super.setContentView(layoutResID);
         mBinder = ButterKnife.bind(this);
+    }
+
+    /**
+     * 接收语言切换的广播
+     *
+     * @param update
+     */
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onUpdateLanguageEvent(LanguageChangedEvent.updateLanguageEvent update) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            recreate();
+        } else {
+            setContentView(getPageLayoutId());
+        }
     }
 
     @Override
@@ -87,5 +120,6 @@ public class BaseActivity extends AppCompatActivity {
         super.onDestroy();
         if (mBinder != null)
             mBinder.unbind();
+        EventBus.getDefault().unregister(this);
     }
 }
