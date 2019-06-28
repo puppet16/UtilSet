@@ -24,7 +24,7 @@ allprojects {
 
 ```
 dependencies {
-  implementation 'com.github.puppet16:UtilSet:v1.0.0'
+  implementation 'com.github.puppet16:UtilSet:v1.0.1'
 }
 ```
 
