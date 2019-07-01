@@ -1,14 +1,16 @@
 package com.luck.utilset;
 
-import android.os.Bundle;
+import com.luck.library.base.BaseActivity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected void initPage() {
+
+    }
+
+    @Override
+    protected int getPageLayoutId() {
+        return R.layout.activity_main;
     }
 }
