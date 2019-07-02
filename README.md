@@ -32,7 +32,7 @@ dependencies {
 
 ## 1. [ButterKnife](https://github.com/JakeWharton/butterknife)
 
-## 2. [Toasty](https://github.com/GrenderG/Toasty)
+## 2. Toasty &emsp;扩展自[Toasty](https://github.com/GrenderG/Toasty)，暴露cancel方法，并与基类activity绑定
 
 ## 3. [Gson](https://github.com/google/gson)
 
