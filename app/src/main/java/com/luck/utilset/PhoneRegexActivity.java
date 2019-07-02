@@ -9,14 +9,13 @@ import android.widget.Toast;
 
 import androidx.appcompat.widget.AppCompatEditText;
 
-
 import com.luck.library.base.BaseActivity;
 import com.luck.library.utils.PhoneRegexUtils;
+import com.luck.library.utils.toasty.Toasty;
 
 import butterknife.BindArray;
 import butterknife.BindView;
 import butterknife.OnClick;
-import es.dmoral.toasty.Toasty;
 
 public class PhoneRegexActivity extends BaseActivity {
 

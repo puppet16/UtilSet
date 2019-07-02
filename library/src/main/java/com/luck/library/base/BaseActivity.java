@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.luck.library.R;
 import com.luck.library.event.LanguageChangedEvent;
 import com.luck.library.utils.LanguageUtils;
+import com.luck.library.utils.toasty.Toasty;
 import com.luck.library.widget.GestureViewGroup;
 
 import org.greenrobot.eventbus.EventBus;
@@ -22,7 +23,6 @@ import org.greenrobot.eventbus.ThreadMode;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-import es.dmoral.toasty.Toasty;
 
 /*************************************************************************************
  * Module Name:

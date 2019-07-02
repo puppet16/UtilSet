@@ -7,12 +7,12 @@ import com.luck.library.base.BaseActivity;
 import com.luck.library.event.LanguageChangedEvent;
 import com.luck.library.utils.LanguageUtils;
 import com.luck.library.utils.LogUtils;
+import com.luck.library.utils.toasty.Toasty;
 
 import org.greenrobot.eventbus.EventBus;
 
 import butterknife.BindView;
 import butterknife.OnClick;
-import es.dmoral.toasty.Toasty;
 
 public class LanguageActivity extends BaseActivity {
     @BindView(R.id.languageIvAuto)

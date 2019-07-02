@@ -1,4 +1,4 @@
-package es.dmoral.toasty;
+package com.luck.library.utils.toasty;
 
 import android.content.Context;
 import android.graphics.PorterDuff;
@@ -13,6 +13,8 @@ import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.core.content.ContextCompat;
+
+import com.luck.library.R;
 
 /**
  * This file is part of Toasty.

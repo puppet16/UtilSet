@@ -8,9 +8,9 @@ import android.text.style.StyleSpan;
 import android.view.View;
 
 import com.luck.library.base.BaseActivity;
+import com.luck.library.utils.toasty.Toasty;
 
 import butterknife.OnClick;
-import es.dmoral.toasty.Toasty;
 
 import static android.graphics.Typeface.BOLD_ITALIC;
 

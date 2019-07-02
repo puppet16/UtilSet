@@ -24,6 +24,11 @@ public class MainActivity extends BaseActivity {
     }
 
     @Override
+    protected boolean hasCustomSlide() {
+        return false;
+    }
+
+    @Override
     protected int getPageLayoutId() {
         return R.layout.activity_main;
     }
