@@ -1,3 +1,46 @@
 <resources>
-    <string name="app_name">UtilSet</string>
+    <string name="app_name" translatable="false">UtilSet</string>
+
+    <!--Main-->
+    <string name="main_toasty">个性化吐息示例</string>
+    <string name="main_phoneregex">中国号码匹配示例</string>
+    <string name="main_language_change">语言切换</string>
+    <!--Toasty-->
+    <string name="toasty_normal_toast_with_icon">带图片的正常吐息</string>
+    <string name="toasty_normal_toast_without_icon">不带图片的正常吐息</string>
+    <string name="toasty_warning_toast">警告吐息</string>
+    <string name="toasty_info_toast">信息吐息</string>
+    <string name="toasty_info_toast_with_formatting">带格式化的信息提示</string>
+    <string name="toasty_error_toast">错误吐息</string>
+    <string name="toasty_success_toast">成功吐息</string>
+    <string name="toasty_custom_configuration">自定义内容</string>
+    <string name="toasty_error_message">这是个错误提示</string>
+    <string name="toasty_success_message">成功!</string>
+    <string name="toasty_info_message">这是个信息提示</string>
+    <string name="toasty_warning_message">这是个警告吐息</string>
+    <string name="toasty_normal_message_without_icon">不带图片的正常吐息</string>
+    <string name="toasty_normal_message_with_icon">带图片的正常吐息</string>
+    <string name="toasty_custom_message" translatable="false">"sudo kill -9 everyone啊哈 "</string>
+    <string name="toasty_custom_show_last">取消Toast</string>
+    <!--PhoneRegex-->
+    <string name="phoneregex_check">检查</string>
+    <string name="phoneregex_input_number">输入手机号</string>
+    <string-array name="phoneRegexType">
+        <item>所有号码（手机卡 + 数据卡 + 上网卡）</item>
+        <item>所有支持短信功能的号码（手机卡 + 上网卡）</item>
+        <item>所有手机卡</item>
+        <item>移动卡</item>
+        <item>联通卡</item>
+        <item>电信卡</item>
+        <item>所有虚拟手机卡</item>
+        <item>虚拟移动卡</item>
+        <item>虚拟联通卡</item>
+        <item>虚拟电信卡</item>
+    </string-array>
+    <string name="language_auto">自动</string>
+    <string name="language_chinese">简体中文</string>
+    <string name="language_english">英文</string>
+    <string name="language_now_is">现在就是</string>
+
+
 </resources>

@@ -16,6 +16,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ToastyActivity"
+            android:theme="@style/TranslateTheme" />
+        <activity
+            android:name=".PhoneRegexActivity"
+            android:theme="@style/TranslateTheme" />
+        <activity
+            android:name=".LanguageActivity"
+            android:theme="@style/TranslateTheme" />
     </application>
 
 </manifest>
