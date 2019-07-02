@@ -1,16 +1,17 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 group='com.github.puppet16'
+version = rootProject.ext.versionName
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion rootProject.ext.compileSdkVersion
 
 
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -38,10 +39,10 @@ dependencies {
     //butterknife
     api 'com.jakewharton:butterknife:10.1.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
-    //Toasty
-    api 'com.github.GrenderG:Toasty:1.4.2'
     //Gson
     api 'com.google.code.gson:gson:2.8.5'
     //EventBus
     implementation 'org.greenrobot:eventbus:3.1.1'
+    //Toasty
+    api project(path: ':toasty')
 }

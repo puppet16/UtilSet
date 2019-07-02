@@ -22,6 +22,7 @@ import org.greenrobot.eventbus.ThreadMode;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+import es.dmoral.toasty.Toasty;
 
 /*************************************************************************************
  * Module Name:
@@ -63,7 +64,6 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-
         if (hasCustomSlide()) {
             FrameLayout decorView = (FrameLayout) mActivity.getWindow().getDecorView();
             View decorView_child = decorView.getChildAt(0);
@@ -85,6 +85,12 @@ public abstract class BaseActivity extends AppCompatActivity {
         if (hasCustomSlide()) {
             mActivity.overridePendingTransition(0, R.anim.slide_right_out);
         }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Toasty.cancel();
     }
 
     protected boolean hasCustomSlide() {
