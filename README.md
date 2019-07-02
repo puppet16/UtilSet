@@ -3,7 +3,7 @@
 放置一些工具类 &emsp;实例见[LibraryShowDemo](https://github.com/puppet16/LibraryShowDemo)
 
 设置依赖库指南：[https://www.jianshu.com/p/6b489a73df4e](https://www.jianshu.com/p/6b489a73df4e)  
-**关键点**：1. 要创建Android Library类型的Moduel; &emsp; 2. 要提交完整的工程，包括gradle文件夹、Test文件夹、gradlew等。
+**关键点**：1. 要创建Android Library类型的Moduel; &emsp; 2. 要提交完整的工程，包括gradle文件夹、Test文件夹、gradlew等。&emsp;3. 只可以创建一个module
 
 # 使用方式
 
