@@ -1,4 +1,4 @@
-# UtilSet  [![Release](https://jitpack.io/v/puppet16/utilset.svg)](https://jitpack.io/puppet16/UtilSet)   ![GitHub repo size](https://img.shields.io/github/repo-size/puppet16/utilset.svg?color=green)   ![GitHub release](https://img.shields.io/github/release/puppet16/UtilSet.svg)
+# UtilSet  [![Release](https://jitpack.io/v/puppet16/utilset.svg)](https://jitpack.io/#puppet16/UtilSet)   ![GitHub repo size](https://img.shields.io/github/repo-size/puppet16/utilset.svg?color=green)   ![GitHub release](https://img.shields.io/github/release/puppet16/UtilSet.svg)
 
 放置一些工具类 &emsp;实例见[LibraryShowDemo](https://github.com/puppet16/LibraryShowDemo)
 
