@@ -1,7 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 group='com.github.puppet16'
-version = rootProject.ext.versionName
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
