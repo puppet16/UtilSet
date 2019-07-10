@@ -19,12 +19,22 @@ allprojects {
 }
  
 ```
-
-3. 然后添加依赖
+3. 在模块级`gradle`文件中的`android`里添加java1.8支持，如下：
+```
+android {
+   ...
+ compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+```
+4. 然后添加依赖
 
 ```
 dependencies {
-  implementation 'com.github.puppet16:UtilSet:v1.0.1'
+  implementation 'com.github.puppet16:UtilSet:v1.0.6'
+  annotationProcessor "com.jakewharton:butterknife-compiler:10.1.0"
 }
 ```
 
